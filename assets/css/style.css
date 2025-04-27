@@ -192,12 +192,13 @@ nav i {
   top: 5px;
 }
 
-/* main */
+h4.teal-text {
+  font-size: 1.8rem; /* bigger size */
+  font-weight: 600; /* bold */
+  margin: 40px 0 20px 0; /* more space */
+}
 
-/* main {
-  background: url(../../assets/img/bg.png) repeat;
-  padding-left: 190px;
-} */
+
 
 main {
   background: url(../../assets/img/bg.png) repeat;
@@ -824,4 +825,99 @@ small {
     font-weight: bold;
     margin-bottom: 10px;
   }
+  .scrollable-row {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .scrollable-row > .col {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
 
+
+/* -------- Project Card Hover Animation -------- */
+.card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* -------- GitHub Button Hover Color -------- */
+.btn-floating:hover {
+  background-color: #008073 !important;
+  transition: background-color 0.3s ease;
+}
+
+/* -------- Section Headings (Data Analysis, Engineering etc.) -------- */
+h4.teal-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 40px 0 20px 0;
+}
+
+/* -------- Project Row Scrollable -------- */
+.scrollable-row {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+}
+.scrollable-row > .col {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* -------- Contact Section Layout Fix -------- */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.contact-grid .card {
+  flex: 1 1 450px;
+  max-width: 500px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  margin-top: 15px;
+  background-color: #008073;
+  border: none;
+  padding: 12px 30px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00695c;
+}
+
+
+  
