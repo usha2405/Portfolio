@@ -849,11 +849,11 @@ small {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* -------- GitHub Button Hover Color -------- 
+/* -------- GitHub Button Hover Color -------- */
 .btn-floating:hover {
   background-color: #008073 !important;
   transition: background-color 0.3s ease;
-}*/
+}
 
 /* -------- Section Headings (Data Analysis, Engineering etc.) -------- */
 h4.teal-text {
