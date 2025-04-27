@@ -122,10 +122,10 @@ export default function Contact() {
               <div>
                 <h3 className="font-medium">Email</h3>
                 <a
-                  href="mailto:prateekbansal64@gmail.com"
+                  href="mailto:ushajusa@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  prateekbansal64@gmail.com
+                  ushajusa@gmail.com
                 </a>
               </div>
             </div>
@@ -137,11 +137,11 @@ export default function Contact() {
               <div>
                 <h3 className="font-medium">LinkedIn</h3>
                 <Link
-                  href="https://linkedin.com/in/itsprateekbansal"
+                  href="https://linkedin.com/in/ushajain"
                   target="_blank"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  linkedin.com/in/itsprateekbansal
+                  linkedin.com/in/ushajain
                 </Link>
               </div>
             </div>
@@ -153,11 +153,11 @@ export default function Contact() {
               <div>
                 <h3 className="font-medium">GitHub</h3>
                 <Link
-                  href="https://github.com/itsprateekbansal"
+                  href="https://github.com/usha2405"
                   target="_blank"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  github.com/itsprateekbansal
+                  github.com/usha2405
                 </Link>
               </div>
             </div>
@@ -170,4 +170,3 @@ export default function Contact() {
     </div>
   )
 }
-
