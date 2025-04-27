@@ -923,12 +923,6 @@ form button:hover {
   background-color: #00695c;
 }
 
-/* Disable pop hover only for specific big containers */
-.no-hover {
-  transition: none !important;
-  transform: none !important;
-  box-shadow: none !important;
-}
 
 @media (max-width: 600px) {
   .scrollable-row > .col {
