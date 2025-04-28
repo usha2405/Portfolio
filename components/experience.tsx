@@ -18,7 +18,7 @@ const experiences = [
       "Created Qualtrics surveys and worked with teams to develop sentiment analysis and multi-modal research workflows for studying human emotions and behaviors.",
     ],
     skills: ["Python", "BeautifulSoup", "Selenium", "Qualtrics", "LLAMA3", "OpenAI API", "Tokenization", "Sentiment Analysis"],
-    logo: "Kelley-logo.jpeg"
+    logo: "kelley-logo.jpeg"
   },
   {
     title: "HR Data Analyst Intern",
@@ -58,7 +58,7 @@ const experiences = [
       "Applied NLP algorithms to improve chatbot comprehension, optimizing user engagement and learning outcomes."
     ],
     skills: ["LangChain", "Ollama", "OpenAI GPT-4o-mini", "Streamlit", "NLP"],
-    logo: "Kelley-logo.jpeg"
+    logo: "kelley-logo.jpeg"
   },
   {
     title: "Research Analyst",
@@ -71,7 +71,7 @@ const experiences = [
       "Executed statistical analysis, including T-tests, to assess intervention impact and optimize academic strategies."
     ],
     skills: ["Python", "Tableau", "Data Validation", "Statistical Analysis"],
-    logo: "Kelley-logo.jpeg"
+    logo: "kelley-logo.jpeg"
   },
   {
     title: "Data Analyst",
