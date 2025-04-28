@@ -1,55 +1,99 @@
-"use client"
+"use client";
 
-import { ExternalLink, Github } from "lucide-react"
-import Link from "next/link"
-import { useRef } from "react"
-import { useInView } from "framer-motion"
+import { ExternalLink, Github } from "lucide-react";
+import Link from "next/link";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
-const projects = [
+// Your projects array
+const projectSections = [
   {
-    title: "Thunder",
-    description:
-      "A food delivery web application with AI-powered recommendations and voice command support for campus restaurants.",
-    details: [
-      "Implemented secure authentication with bcrypt password hashing and integrated Razorpay for payments.",
-      "Designed and built a real-time order tracking dashboard for a seamless user experience.",
-    ],
-    skills: ["Node.js", "MongoDB", "Express.js", "Tailwind CSS", "AI/ML", "Authentication", "Payments"],
-    github: "https://github.com/itsprateekbansal",
-    demo: "#",
-    image: "/placeholder.svg?height=200&width=400",
+    section: "📊 Exploratory Data Analysis & Visualization",
+    projects: [
+      {
+        title: "Credit Card Analytics Dashboard",
+        description: "Designed an interactive Power BI dashboard to analyze customer credit card spending behaviors, segment customers, and identify risk patterns.",
+        details: [],
+        skills: ["Power BI", "DAX", "SQL", "Excel"],
+        github: "https://github.com/usha2405/Power-BI-Credit-Card-Analytics-Dashboard",
+        demo: null,
+        image: "/creditcard.jpg?height=200&width=400"
+      }, 
+      {
+        title: "Smart Data Processing with Spark and MongoDB",
+        description: "Built an ETL pipeline using PySpark for large-scale data ingestion, transformation, and loading into MongoDB, focusing on data quality, performance, and scalability.",
+        details: [],
+        skills: ["PySpark", "MongoDB", "Python", "Jupyter Notebook"],
+        github: "https://github.com/usha2405/Smart-Data-Processing-with-Spark-and-MongoDB",
+        demo: null,
+        image: "/Electric-Vechicle.jpg?height=200&width=400"
+      }
+    ]
   },
   {
-    title: "FaceMash",
-    description:
-      "A face detection and recognition system capable of recognizing and swapping multiple faces in real-time.",
-    details: [
-      "Implemented K-Nearest Neighbors (KNN) for recognition and utilized Haar-Cascade Classifier for detection.",
-    ],
-    skills: ["Python", "OpenCV", "KNN", "Computer Vision", "Image Processing"],
-    github: "https://github.com/itsprateekbansal",
-    demo: null,
-    image: "/placeholder.svg?height=200&width=400",
+    section: "🛠️ Data Engineering & ETL Pipelines",
+    projects: [
+      
+      {
+        title: "StreamStonks Real-Time Data Pipeline",
+        description: "Developed a streaming pipeline using Kafka, Spark Streaming, and MongoDB to process stock market data in real-time for financial analytics.",
+        details: [],
+        skills: ["Apache Kafka", "Spark Streaming", "MongoDB", "Python"],
+        github: "https://github.com/usha2405/StreamStonks-Data-Pipeline",
+        demo: null,
+        image: "/stock-market.jpg?height=200&width=400"
+      }
+    ]
   },
-]
+  {
+    section: "🤖 Machine Learning & Predictive Modeling",
+    projects: [
+      {
+        title: "PredYield: Crop Yield Prediction",
+        description: "Built machine learning models to predict crop yield based on environmental and agricultural data, optimizing resource planning for farmers.",
+        details: [],
+        skills: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Jupyter Notebook"],
+        github: "https://github.com/usha2405/PredYield",
+        demo: null,
+        image: "/crop.jpeg?height=200&width=400"
+      },
+      {
+        title: "Violation Anticipation for Urban Traffic Enforcement",
+        description: "Developed machine learning models to predict traffic violations using urban mobility data, improving city traffic enforcement strategies.",
+        details: [],
+        skills: ["Python", "Scikit-learn", "TensorFlow", "Keras", "Pandas", "Matplotlib"],
+        github: "https://github.com/usha2405/Violation-Anticipation-Machine-Learning-Approaches-for-Urban-Traffic-Enforcement",
+        demo: null,
+        image: "/Parking.png?height=200&width=400"
+      }
+    ]
+  }
+];
 
 export default function Projects() {
   return (
-    <div className="grid gap-8 md:grid-cols-2">
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} index={index} />
+    <div className="flex flex-col gap-16">
+      {projectSections.map((section, idx) => (
+        <div key={idx} className="space-y-8">
+          <h3 className="text-2xl font-bold">{section.section}</h3>
+          <div className="grid gap-8 md:grid-cols-2">
+            {section.projects.map((project, index) => (
+              <ProjectCard key={index} project={project} index={index} />
+            ))}
+          </div>
+        </div>
       ))}
     </div>
-  )
+  );
 }
 
 function ProjectCard({ project, index }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <div
@@ -70,13 +114,16 @@ function ProjectCard({ project, index }) {
           <CardDescription className="text-base">{project.description}</CardDescription>
         </CardHeader>
         <CardContent className="flex-1">
-          <ul className="ml-6 list-disc space-y-2 text-muted-foreground">
-            {project.details.map((detail, i) => (
-              <li key={i} className="leading-relaxed">
-                {detail}
-              </li>
-            ))}
-          </ul>
+          {/* Defensive check for details */}
+          {project.details && project.details.length > 0 && (
+            <ul className="ml-6 list-disc space-y-2 text-muted-foreground">
+              {project.details.map((detail, i) => (
+                <li key={i} className="leading-relaxed">
+                  {detail}
+                </li>
+              ))}
+            </ul>
+          )}
           <div className="mt-4 flex flex-wrap gap-2">
             {project.skills.map((skill, i) => (
               <Badge key={i} variant="secondary" className="bg-secondary/50">
@@ -101,6 +148,5 @@ function ProjectCard({ project, index }) {
         </CardFooter>
       </Card>
     </div>
-  )
+  );
 }
-

@@ -16,7 +16,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-md">
         <div className="container flex h-16 items-center justify-between">
           <div className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
-            Prateek Bansal
+            Usha Jain
           </div>
           <nav className="hidden md:block">
             <ul className="flex gap-8">
@@ -72,14 +72,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="achievements" className="py-24 relative">
+        <section id="education" className="py-24 relative">
+          <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
+          <div className="container relative">
+            <h2 className="text-3xl font-bold tracking-tight mb-2">Education</h2>
+            <p className="text-muted-foreground mb-10 max-w-2xl">My academic journey building expertise in technology and data</p>
+            <Achievements />
+          </div>
+        </section>
+
+        {/* <section id="achievements" className="py-24 relative">
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
           <div className="container relative">
             <h2 className="text-3xl font-bold tracking-tight mb-2">Achievements</h2>
             <p className="text-muted-foreground mb-10 max-w-2xl">Recognition and milestones in my career</p>
             <Achievements />
           </div>
-        </section>
+        </section> */}
 
         <section id="contact" className="py-24 bg-muted/30 relative">
           <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent opacity-70 pointer-events-none"></div>
@@ -94,25 +103,25 @@ export default function Home() {
       <footer className="border-t py-8">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Prateek Bansal. All rights reserved.
+            © {new Date().getFullYear()} Usha Jain. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link
-              href="https://github.com/itsprateekbansal"
+              href="https://github.com/usha2405"
               target="_blank"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               GitHub
             </Link>
             <Link
-              href="https://linkedin.com/in/itsprateekbansal"
+              href="https://linkedin.com/in/ushajain"
               target="_blank"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               LinkedIn
             </Link>
             <Link
-              href="mailto:prateekbansal64@gmail.com"
+              href="mailto:ushajusa@gmail.com"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               Email

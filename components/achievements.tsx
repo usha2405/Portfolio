@@ -1,36 +1,53 @@
 "use client"
 
-import { Award, Medal } from "lucide-react"
+import { GraduationCap } from "lucide-react"
 import { useRef } from "react"
 import { useInView } from "framer-motion"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-const achievements = [
+const education = [
   {
-    title: "Google Cloud Professional Cloud Architect Certification",
-    icon: Award,
-    description:
-      "Validated expertise in designing, developing, and managing robust, secure, scalable, and dynamic solutions on Google Cloud.",
+    title: "Indiana University Bloomington",
+    location: "Bloomington, IN, USA",
+    degree: "Master of Science in Data Science",
+    cgpa: "3.7/4.0",
+    link: "https://bloomington.iu.edu/",
+    courseworks: [
+      "Advanced Database Concepts",
+      "Management Access and Use of Big Data",
+      "Applied Machine Learning",
+      "Statistics",
+      "Computer Vision",
+    ],
   },
   {
-    title: "3rd Prize Winner – National Level Hackathon (Codestreet 2020)",
-    icon: Medal,
-    description: "Recognized for innovative solution development at American Express's national coding competition.",
+    title: "University of Mumbai",
+    location: "Mumbai, Maharashtra, India",
+    degree: "Bachelor of Computer Engineering",
+    cgpa: "3.8/4.0",
+    link: "https://mu.ac.in/",
+    courseworks: [
+      "Data Structures and Algorithms",
+      "Database Management Systems",
+      "Operating Systems",
+      "Data Mining",
+      "Computer Network",
+    ],
   },
 ]
 
-export default function Achievements() {
+export default function Education() {
   return (
     <div className="grid gap-8 md:grid-cols-2">
-      {achievements.map((achievement, index) => (
-        <AchievementCard key={index} achievement={achievement} index={index} />
+      {education.map((edu, index) => (
+        <EducationCard key={index} education={edu} index={index} />
       ))}
     </div>
   )
 }
 
-function AchievementCard({ achievement, index }) {
+function EducationCard({ education, index }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
 
@@ -43,17 +60,31 @@ function AchievementCard({ achievement, index }) {
       <Card className="h-full group hover:shadow-lg transition-all duration-300 hover:shadow-primary/5 border-muted-foreground/20">
         <CardHeader className="flex flex-row items-start gap-4 pb-2">
           <div className="mt-1 rounded-full bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors">
-            <achievement.icon className="h-6 w-6 text-primary" />
+            <GraduationCap className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <CardTitle className="text-xl group-hover:text-primary transition-colors">{achievement.title}</CardTitle>
+            <CardTitle className="text-xl group-hover:text-primary transition-colors">
+              <a href={education.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                {education.title}
+              </a>
+            </CardTitle>
+            <p className="text-muted-foreground text-sm">{education.location}</p>
           </div>
         </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground leading-relaxed">{achievement.description}</p>
+        <CardContent className="pt-2">
+          <p className="text-muted-foreground mb-2">
+            <b>Degree:</b> {education.degree}
+            <br />
+            <b>CGPA:</b> {education.cgpa}
+          </p>
+          <p className="text-muted-foreground mb-1 font-semibold">Relevant Courseworks:</p>
+          <ul className="list-disc list-inside text-muted-foreground text-sm">
+            {education.courseworks.map((course, idx) => (
+              <li key={idx}>{course}</li>
+            ))}
+          </ul>
         </CardContent>
       </Card>
     </div>
   )
 }
-

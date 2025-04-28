@@ -8,38 +8,32 @@ import { Badge } from "@/components/ui/badge"
 
 const skillCategories = [
   {
-    category: "Languages",
+    category: "Programming Language",
     icon: "💻",
-    skills: ["C++", "Java", "Python", "SQL", "JavaScript", "HTML/CSS", "R"],
-  },
-  {
-    category: "Frameworks & Libraries",
-    icon: "🧩",
-    skills: ["Spring Boot", "React", "Node.js", "Flask", "JUnit", "Kafka", "FastAPI", "Material-UI"],
-  },
-  {
-    category: "Tools & Platforms",
-    icon: "🛠️",
-    skills: [
-      "Git",
-      "Docker",
-      "Kubernetes",
-      "Google Cloud Platform",
-      "TravisCI",
-      "Visual Studio Code",
-      "IntelliJ",
-      "PyCharm",
-    ],
+    skills: ["Python", "C++", "Java", "JavaScript", "SQL", "R", "Flask"]
   },
   {
     category: "Databases",
     icon: "🗄️",
-    skills: ["PostgreSQL", "MongoDB", "Cassandra"],
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "Snowflake", "SSMS", "SAP", "SAS", "SSRS", "Cassandra"]
   },
   {
-    category: "Other",
-    icon: "🔍",
-    skills: ["Distributed Systems", "API Development", "System Design"],
+    category: "Data Visualization",
+    icon: "📊",
+    skills: ["Power BI", "Tableau", "Looker Studio", "Microsoft Excel", "Matplotlib", "ggplot2", "Plotly", "GeoPandas"]
+  },
+  
+  {
+    category: "Cloud Technologies",
+    icon: "☁️",
+    skills: [
+      "AWS (S3, Lambda, DynamoDB, Redshift, Glue, Athena)", "Google Cloud Platform", "Azure", "Docker", "dbt", "Apache Spark", "Apache Kafka", "Hadoop", "ELT Pipelines"
+    ]
+  },
+  {
+    category: "Statistical Analysis & Tools",
+    icon: "📈",
+    skills: ["Hypothesis Testing", "Regression", "A/B Testing", "LLM", "NLP", "ARIMA", "Jupyter", "Postman", "Git", "Selenium"]
   },
 ]
 
