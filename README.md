@@ -2,7 +2,7 @@
 # Personal Portfolio ⚡️ 
 > A clean, beautiful, responsive portfolio website for showcasing my work and projects!
 
-> https://portfolio-usha-jains-projects.vercel.app/
+> https://portfolio--rose.vercel.app/
 
 ![GitHub stars](https://img.shields.io/github/stars/usha2405/portfolio) 
 ![GitHub forks](https://img.shields.io/github/forks/usha2405/portfolio)
@@ -14,7 +14,7 @@
 ### Website Preview
 <p align="center"> 
   <kbd>
-    <a href="https://portfolio-usha-jains-projects.vercel.app/" target="_blank"><img src="screenshot.png">
+    <a href="https://portfolio--rose.vercel.app/" target="_blank"><img src="screenshot.png">
   </a>
   </kbd>
 </p>
@@ -22,7 +22,10 @@
 :star: Star me on GitHub — it helps!
 
 ## Features 📋
-⚡️ Fully Responsive⚡️ Dark / Light / System Theme Toggle⚡️ Smooth Animations with Tailwind CSS⚡️ Easy to Customize⚡️ SEO Friendly
+- ⚡️ Fully Responsive
+- ⚡️ Dark / Light / System Theme Toggle
+- ⚡️ Smooth Animations with Tailwind CSS
+- ⚡️ Easy to Customize⚡️ SEO Friendly
 
 ## Installation & Deployment 📦
 - Clone the repository and modify the content according to your requirement.
@@ -34,7 +37,7 @@
 ## Sections 📚
 ✔️ About Me✔️ Experience✔️ Projects✔️ Skills✔️ Education✔️ Contact Information✔️ Resume
 
-To view a live example, **[click here](https://portfolio-usha-jains-projects.vercel.app/)**
+To view a live example, **[click here](https://portfolio--rose.vercel.app/)**
 
 ## Tools Used 🛠️
 * [<b>Next.js</b>](https://nextjs.org/) - React-based Framework
@@ -56,5 +59,4 @@ To view a live example, **[click here](https://portfolio-usha-jains-projects.ver
 
 - 🔃 Create a new pull request.
 
-## License 📄
-This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+

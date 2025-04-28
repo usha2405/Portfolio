@@ -6,9 +6,10 @@ import Hero from "@/components/hero"
 import Experience from "@/components/experience"
 import Skills from "@/components/skills"
 import Projects from "@/components/projects"
-import Achievements from "@/components/achievements"
+import Achievements from "@/components/education"
 import Contact from "@/components/contact"
 import ThemeToggle from "@/components/theme-toggle"
+import Education from "@/components/education"
 
 export default function Home() {
   return (
@@ -18,9 +19,10 @@ export default function Home() {
           <div className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
             Usha Jain
           </div>
-          <nav className="hidden md:block">
+          <div className="flex items-center gap-6">
+          <nav className="flex gap-8">
             <ul className="flex gap-8">
-              {["About", "Experience", "Skills", "Projects", "Achievements", "Contact"].map((item) => (
+              {["About", "Experience", "Skills", "Projects", "Education", "Contact"].map((item) => (
                 <li key={item}>
                   <Link href={`#${item.toLowerCase()}`} className="text-sm font-medium relative group">
                     {item}
@@ -30,7 +32,7 @@ export default function Home() {
               ))}
             </ul>
           </nav>
-          <div className="flex items-center gap-4">
+          
             <ThemeToggle />
             <Button variant="outline" size="sm" className="md:hidden">
               Menu
@@ -49,7 +51,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent opacity-70 pointer-events-none"></div>
           <div className="container relative">
             <h2 className="text-3xl font-bold tracking-tight mb-2">Experience</h2>
-            <p className="text-muted-foreground mb-10 max-w-2xl">My professional journey building software solutions</p>
+            <p className="text-muted-foreground mb-10 max-w-2xl">Exploring how data-driven approaches can solve real-world business challenges</p>
             <Experience />
           </div>
         </section>
@@ -77,7 +79,7 @@ export default function Home() {
           <div className="container relative">
             <h2 className="text-3xl font-bold tracking-tight mb-2">Education</h2>
             <p className="text-muted-foreground mb-10 max-w-2xl">My academic journey building expertise in technology and data</p>
-            <Achievements />
+            <Education />
           </div>
         </section>
 

@@ -23,7 +23,7 @@ const experiences = [
   {
     title: "HR Data Analyst Intern",
     company: "Perma-Pipe",
-    location: "Houston, TX, USA",
+    location: "Houston, TX",
     period: "June 2024 – December 2024",
     description: [
       "Developed scalable ETL pipelines using Python to streamline data processing and optimize efficiency.",
@@ -37,7 +37,7 @@ const experiences = [
   {
     title: "Marketing Research Analyst",
     company: "Indiana University Bloomington",
-    location: "Bloomington, IN, USA",
+    location: "Bloomington, IN",
     period: "May 2024 – August 2024",
     description: [
       "Implemented statistical assessments and data modeling techniques to analyze data from over 1,000 universities across two decades.",
@@ -76,7 +76,7 @@ const experiences = [
   {
     title: "Data Analyst",
     company: "Tata Consultancy Services",
-    location: "India",
+    location: "<Mumbai, MH, India",
     period: "July 2021 – August 2023",
     description: [
       "Enhanced C++ code quality for insurance systems, improving stability.",
